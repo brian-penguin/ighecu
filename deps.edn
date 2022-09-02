@@ -1,9 +1,10 @@
-{:paths ["src"]
+{:paths ["src", "resources"]
  :deps  {clj-kondo/clj-kondo {:mvn/version "2022.08.03"}
          ring/ring {:mvn/version "1.9.5"}
          ring/ring-defaults {:mvn/version "0.3.3"}
          http-kit/http-kit {:mvn/version "2.7.0-alpha1"}
-         compojure/compojure {:mvn/version "1.7.0"}}
+         compojure/compojure {:mvn/version "1.7.0"}
+         selmer/selmer {:mvn/version "1.12.53"}}
  :aliases
   {:neil {:project {:name ighecu/ighecu}}
 

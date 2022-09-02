@@ -5,14 +5,15 @@
             [compojure.route :as route]
             [ring.middleware.defaults :refer :all]
             [clojure.pprint :as pp]
-            [clojure.string :as str])
+            [clojure.string :as str]
+            [selmer.parser :as selmer])
   (:gen-class))
 
 (defn home-page
   [_req]
   {:status  200
    :headers {"Content-Type" "text/html"}
-   :body    "Hello World"})
+   :body (selmer/render-file "templates/home.html" {})})
 
 (defn request-page
   [req]
